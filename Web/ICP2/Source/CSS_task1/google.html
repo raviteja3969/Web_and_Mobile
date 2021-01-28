@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Google Home Page</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<ul id="nav-bar">
+    <li><a class="nav-bar-opacity" href="#">Gmail</a></li>
+    <li><a class="nav-bar-opacity" href="#">Images</a></li>
+    <li><a href="#">
+        <div class="nav-bar-opacity" id="menu-icon"></div>
+    </a></li>
+    <!-- Adding notification bell icon -->
+    <li><a href="#"><img src="images\bell.jpg" height="25" width="25"/></a></li>
+    <!-- Adding gmail account image-->
+    <li><a href="#"><img class="image" src="images\dp.jpg" height="25" width="25"/></a></li>
+</ul>
+
+<div class="main-content">
+    <div id="logo">
+        <img alt="Google logo"
+             src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+    </div>
+    <div id="search-bar">
+        <label>
+            <input name="search" type="text">
+        </label>
+        <a href="#" id="speech-link"><img
+                alt="Speech icon"
+                src="https://lh5.googleusercontent.com/OorCLDb2xlVQ4P2MDNCiwAnpv0K1ZrcDwEwRS3sOfDMrnYTnVPvCh7WtFQMbZ_S9u_jzcSLd8g=s128-h128-e365"></a>
+    </div><br>
+    <!-- Adding flex elements in two different containers. Each containing 4 recently opened website with clickable links-->
+    <div>
+        <!-- first container-->
+        <div class="flex-container">
+        <div class="flex-item" >
+            <a href="https://github.com/" target="_blank">
+                <img src="images/GitHub.jpg" alt="GitHub" style="width:150px;height:100px;">
+            </a>
+        </div>
+        <div class="flex-item" >
+            <a href="https://facebook.com/" target="_blank">
+                <img src="images/facebook.jpg" alt="Facebook" style="width:150px;height:100px;">
+            </a>
+        </div>
+        <div class="flex-item" >
+            <a href="https://google.com/" target="_blank">
+                <img src="images/Google.jpg" alt="Google" style="width:150px;height:100px;">
+            </a>
+        </div>
+        <div class="flex-item" >
+            <a href="https://outlook.com/" target="_blank">
+                <img src="images/outlook.jpg" alt="Outlook" style="width:150px;height:100px;">
+            </a>
+        </div>
+    </div>
+        <!--Second Container-->
+        <div class="flex-container">
+        <div class="flex-item" >
+            <a href="https://twitter.com/" target="_blank">
+                <img src="images/twitter.jpg" alt="Twitter" style="width:150px;height:100px;">
+            </a>
+        </div>
+        <div class="flex-item" >
+            <a href="https://w3schools.com/" target="_blank">
+                <img src="images/W3Schools.jpg" alt="W3Schools" style="width:150px;height:100px;">
+            </a>
+        </div>
+        <div class="flex-item" >
+            <a href="https://wikipedia.com/" target="_blank">
+                <img src="images/wikipedia.jpg" alt="WikiPedia" style="width:150px;height:100px;">
+            </a>
+        </div>
+        <div class="flex-item" >
+            <a href="https://youtube.com/" target="_blank">
+                <img src="images/youtube.jpg" alt="Youtube" style="width:150px;height:100px;">
+            </a>
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+<footer>
+    <div class="bottom-nav">
+        <ul class="ul-left">
+            <li><a href="#">Advertising</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <ul class="ul-right">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Settings</a></li>
+
+        </ul>
+    </div>
+</footer>
+</html>
