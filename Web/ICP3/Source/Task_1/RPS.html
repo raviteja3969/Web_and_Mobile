@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="RPS.css">
+
+</head>
+<body style="background-color: #d0e9c6" >
+<div class="container">
+    <h1>Pick Rock, Paper or Scissors</h1>
+<div class="container-fluid" class="row" id="result" style="text-align: center"></div>
+    <div style="text-align: center">
+       <h1><span class="user">YOU</span>
+        <span id="score"></span>
+           <span class="com">COM</span></h1>
+    </div>
+<div class="row">
+    <center>
+        <div class="btn-group btn-group-lg" role="group">
+            <button type="button" onclick="player('rock')" class="btn btn-info"><img src="Images/rock.png" height="100"
+                                                                             width="100"/></button>
+            <button type="button" onclick="player('paper')" class="btn btn-info"><img src="Images/paper.png" height="100"
+                                                                              width="100"/></button>
+            <button type="button" onclick="player('scissors')" class="btn btn-info"><img src="Images/scissors.png" height="100"
+                                                                                 width="100"/></button>
+        </div>
+    </center>
+</div>
+</div>
+<script src="RPS.js"></script>
+</body>
+</html>
