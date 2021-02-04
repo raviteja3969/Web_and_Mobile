@@ -1,15 +1,12 @@
-$(function () {
-});
-var hand = ["rock", "paper", "scissors"];
-var user=0,computer=0;
+var user=0,computer=0;// Declaring variables to count score
 function score(){
     var score_div = document.getElementById("score").innerHTML = user + " - " + computer;
-}
-setInterval(score, 50);
+}//sending score using ID
+setInterval(score, 50);//The setInterval() method calls a function or evaluates an expression at specified intervals
 var pick;
 function player(pick){
     compare(pick);
-}
+}//Value of pick is received from HTML which in turn calls the function with game logic
 function compare(choice1) {
     var computerChoice = Math.random();
     if (computerChoice < 0.34) {
@@ -55,24 +52,19 @@ function compare(choice1) {
     }
 
 
-}
+}//Function to compare values of user and computer to decide who wins
 
 function denoteWinner() {
     $("#result").html("<h1 style='background-color: lightgreen'>You Win!</h1>");
     user++;
-}
+}//Function is called when user wins the comparision
 
 function denoteLoser() {
     $("#result").html("<h1 style='background-color: lightsalmon'>Computer Wins!</h1>");
     computer++;
-}
+}//Function is called when computer wins the comparision
 
 function denoteDraw() {
     $("#result").html("<h1 style='background-color: #6c757d'>Draw!</h1>")
 
 }
-function output() {
-    $("#score1").html("<h1 class='row' style='background-color: #6c757d'>user:computer</h1>")
-
-}
-

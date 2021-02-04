@@ -1,12 +1,13 @@
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="RPS.css">
+    <title>Rock, Paper or Scissors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!--To make the whole html page responsive to the device -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--Script allow html to use linked javascript -->
+    <link rel="stylesheet" href="RPS.css"><!-- Linking .css file-->
 
 </head>
 <body style="background-color: #d0e9c6" >
-<div class="container">
+<div class="container"> <!-- This div has basic display contents and receiving score value from RPS.js-->
     <h1>Pick Rock, Paper or Scissors</h1>
 <div class="container-fluid" class="row" id="result" style="text-align: center"></div>
     <div style="text-align: center">
@@ -16,7 +17,7 @@
     </div>
 <div class="row">
     <center>
-        <div class="btn-group btn-group-lg" role="group">
+        <div class="btn-group btn-group-lg" role="group"> <!-- Calling functions defined inn RPS.js with user's selection as a parameter-->
             <button type="button" onclick="player('rock')" class="btn btn-info"><img src="Images/rock.png" height="100"
                                                                              width="100"/></button>
             <button type="button" onclick="player('paper')" class="btn btn-info"><img src="Images/paper.png" height="100"
@@ -27,6 +28,6 @@
     </center>
 </div>
 </div>
-<script src="RPS.js"></script>
+<script src="RPS.js"></script><!--Linking Java script-->
 </body>
 </html>
