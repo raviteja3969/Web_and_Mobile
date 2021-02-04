@@ -16,13 +16,10 @@ function compare(choice1) {
     } else {
         choice2 = "scissors";
     }
-
     if (choice1 === choice2) {
-
         denoteDraw();
         output();
     } else if (choice1 === "rock") {
-
         if (choice2 === "scissors") {
             denoteWinner();
             output();
@@ -39,9 +36,7 @@ function compare(choice1) {
             denoteLoser();
             output();
         }
-
     } else if (choice1 === "scissors") {
-
         if (choice2 === "rock") {
             denoteWinner();
             output();
