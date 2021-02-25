@@ -29,6 +29,7 @@ export class SearchRecipeComponent implements OnInit {
   version = '&v=20180323';
   near = '&near=';
   query = '&query=';
+
   constructor(private _http: HttpClient) {
   }
 
@@ -48,8 +49,8 @@ export class SearchRecipeComponent implements OnInit {
     this.placeValue = this.places.nativeElement.value;
 
     if (this.recipeValue !== null) {
-      this._http.get( this.recepieApi + this.recipeValue + this.recepieAppid + this.recepieKey).subscribe((res: any) => {
-        console.log('reciepe search object from edamam api');
+      this._http.get(this.recepieApi + this.recipeValue + this.recepieAppid + this.recepieKey).subscribe((res: any) => {
+        console.log('recipe search object from edamam api');
         console.log(res);
         this.recipeList = Object.keys(res.hits).map(function (k) {
           const i = res.hits[k].recipe;
@@ -61,13 +62,19 @@ export class SearchRecipeComponent implements OnInit {
     }
 
     if (this.placeValue != null && this.placeValue !== '' && this.recipeValue != null && this.recipeValue !== '') {
-      this._http.get( this.placesApi  + this.clientdId + this.clientSecret + this.version
+      this._http.get(this.placesApi + this.clientdId + this.clientSecret + this.version
         + this.near + this.placeValue).subscribe((res: any) => {
         console.log(res);
         this.venueList = Object.keys(res.response.venues).map(function (k) {
           const i = res.response.venues[k];
           // tslint:disable-next-line:max-line-length
-          return {name: i.name, location: i.location.formattedAddress, currentLat: '39.0349657', currentLong: '-94.5787524', formattedAddress: i.location.formattedAddress};
+          return {
+            name: i.name,
+            location: i.location.formattedAddress,
+            currentLat: '39.0349657',
+            currentLong: '-94.5787524',
+            formattedAddress: i.location.formattedAddress
+          };
         });
       });
     }
