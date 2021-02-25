@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   constructor() { }
   ngOnInit() {}
 
-  countDownDate = new Date("March 29, 2021 15:25:30").getTime();
+  countDownDate = new Date("Feb 18, 2021 15:25:30").getTime();
   demo:any;
   x = setInterval(() => {
     var now = new Date().getTime();

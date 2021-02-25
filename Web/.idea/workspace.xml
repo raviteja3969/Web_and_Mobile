@@ -20,7 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="308490fc-45b0-4294-9c31-4de7dbd0bcf5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ICP6/Source/MashUp/images/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ICP6/Source/MashUp/images/google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ICP6/Source/MashUp/src/app/header/header.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ICP6/Source/MashUp/src/app/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ICP5/Sources/EventCountdowm/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ICP5/Sources/EventCountdowm/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ICP6/Source/MashUp/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ICP6/Source/MashUp/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/ICP6/Source/MashUp/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ICP6/Source/MashUp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ICP6/Source/MashUp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ICP6/Source/MashUp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ICP6/Source/MashUp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ICP6/Source/MashUp/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ICP6/Source/MashUp/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ICP6/Source/MashUp/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ICP6/Source/MashUp/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ICP6/Source/MashUp/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ICP6/Source/MashUp/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ICP6/Source/MashUp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ICP6/Source/MashUp/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +50,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/ICP6/Source/MashUp" />
   </component>
   <component name="ProjectId" id="1nwLSuIa2tPgcRbQSktyVPGoHNs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -51,9 +64,11 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ICP6/Source/MashUp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="ts.external.directory.path" value="C:\Users\Ravi Teja\Web and Mobile\Web_and_Mobile\Web\ICP5\Sources\EventCountdowm\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -67,6 +82,7 @@
       <workItem from="1612296210985" duration="12770000" />
       <workItem from="1612385270186" duration="17666000" />
       <workItem from="1612824288705" duration="54000" />
+      <workItem from="1614208361776" duration="86000" />
     </task>
     <servers />
   </component>
@@ -86,9 +102,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1612824343828">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1614208444876">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1612824343828" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1614208444876" />
   </component>
 </project>
