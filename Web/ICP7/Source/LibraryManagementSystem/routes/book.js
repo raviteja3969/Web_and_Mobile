@@ -27,9 +27,6 @@ router.post('/', function (req, res, next) {
 });
 
 /* UPDATE BOOK */
-
-/* DELETE BOOK */
-/* UPDATE BOOK */
 router.put('/:id', function (req, res, next) {
   console.log("body------------",req.body);
   var myquery = {_id: req.params.id};
