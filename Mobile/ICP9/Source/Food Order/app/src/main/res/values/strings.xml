@@ -29,8 +29,8 @@
     <string name="order_summary_quantity">Quantity: <xliff:g example="2" id="quantity">%d</xliff:g></string>
     <string name="order_summary_total_price">Total Price: $ <xliff:g example="10" id="price">%.2f</xliff:g></string>
     <string name="thank_you">Thank you!</string>
-    <string name="too_much_coffee">Please select less than one hundred cups of coffee</string>
-    <string name="too_little_coffee">Please select atleast one cup of coffee</string>
+    <string name="too_much_coffee">Please select less than one hundred</string>
+    <string name="too_little_coffee">Please select atleast one </string>
     <string name="title_activity_summary">Summary</string>
     <string-array name="Feedback">
         <item>Yes</item>
