@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:background="#00000000"
+        android:background="#FFFFFF"
         android:ems="10"
         android:gravity="start"
         android:hint="enter text here..."
@@ -31,7 +31,7 @@
         android:layout_below="@+id/id_txt_mycontent"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
-        android:background="#b2beb5"
+        android:background="#FFFFFF"
         android:onClick="saveTofile"
         android:text="save"
         android:textColor="#000000" />
@@ -44,7 +44,7 @@
         android:layout_alignStart="@+id/id_btn_save"
         android:layout_alignLeft="@+id/id_btn_save"
         android:layout_marginTop="80dp"
-        android:background="#b2beb5"
+        android:background="#FFFFFF"
         android:onClick="retrieveFromFile"
         android:text="open"
         android:textColor="#000000" />

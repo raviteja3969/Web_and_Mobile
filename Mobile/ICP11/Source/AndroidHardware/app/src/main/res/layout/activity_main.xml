@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
-        android:background="#b2beb5"
+        android:background="#FFFFFF"
         android:onClick="onLocationClick"
         android:text="locate me"
         android:textColor="#000000" />
@@ -25,7 +25,7 @@
 
         android:layout_gravity="center"
         android:layout_marginBottom="50dp"
-        android:background="#b2beb5"
+        android:background="#FFFFFF"
         android:onClick="onPhotoClick"
         android:text="take photo"
         android:textColor="#000000" />
@@ -37,7 +37,7 @@
 
         android:layout_gravity="center"
         android:layout_marginBottom="50dp"
-        android:background="#b2beb5"
+        android:background="#FFFFFF"
         android:onClick="onAudioClick"
         android:text="record"
         android:textColor="#000000" />
@@ -49,7 +49,7 @@
         android:layout_gravity="center"
         android:layout_margin="8dp"
         android:layout_marginBottom="30dp"
-        android:background="#b2beb5"
+        android:background="#FFFFFF"
         android:onClick="onStorageClick"
         android:text="storage"
         android:textColor="#000000" />

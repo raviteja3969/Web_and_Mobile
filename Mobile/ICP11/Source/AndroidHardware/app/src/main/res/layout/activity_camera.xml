@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:background="#b2beb5"
+        android:background="#FFFFFF"
         android:onClick="callCamera"
         android:text="Take photo"
         android:textColor="#000000" />
@@ -36,9 +36,9 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="69dp"
-        android:background="#000000"
+        android:background="#FFFFFF"
         android:onClick="redirectToHome"
         android:text="Home"
-        android:textColor="#FFFFFF" />
+        android:textColor="#000000" />
 
 </RelativeLayout>

@@ -81,7 +81,6 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
         }
 
         //Getting the current location of the user.
-
         userCurrentLocation.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0,0,userCurrentLocationListener);
         latitude = userCurrentLocation.getLastKnownLocation(LocationManager.GPS_PROVIDER).getLatitude();
         longitude = userCurrentLocation.getLastKnownLocation(LocationManager.GPS_PROVIDER).getLongitude();
@@ -97,7 +96,7 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
             String knownName = addresses.get(0).getFeatureName();
 
             userAddress.append(knownName + ", " + city + ", " + state + ", " + country + " " + postalCode).append("\t");
-            Toast.makeText(this, " " + userAddress, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, " " + userAddress,Toast.LENGTH_LONG).show();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
