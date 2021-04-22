@@ -70,16 +70,16 @@
 
         <Button
             android:id="@+id/logout"
-            style="?android:textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@color/colorPrimary"
-            android:text="@string/logout"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
-
+            android:text="logout" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/deleteacct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Account" />
 
 </LinearLayout>

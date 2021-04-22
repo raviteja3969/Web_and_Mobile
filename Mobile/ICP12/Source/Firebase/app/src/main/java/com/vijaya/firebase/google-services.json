@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "494756319864",
+    "project_id": "icp-mobile-5",
+    "storage_bucket": "icp-mobile-5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494756319864:android:0c3bb412d7191b94fa538d",
+        "android_client_info": {
+          "package_name": "com.sygwf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "494756319864-86jcnqs13itblu45a3v2auumdnthodg4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPX85PVU8hoVDf3gxdqy_7oGggSWH0zco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "494756319864-86jcnqs13itblu45a3v2auumdnthodg4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494756319864:android:94a5e497681dfceafa538d",
+        "android_client_info": {
+          "package_name": "com.sygwf.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "494756319864-86jcnqs13itblu45a3v2auumdnthodg4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPX85PVU8hoVDf3gxdqy_7oGggSWH0zco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "494756319864-86jcnqs13itblu45a3v2auumdnthodg4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
