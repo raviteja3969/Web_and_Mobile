@@ -55,5 +55,4 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         Intent redirect = new Intent(ForgotPasswordActivity.this, WelcomeActivity.class);
         startActivity(redirect);
     }
-
 }

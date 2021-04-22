@@ -1,7 +1,7 @@
 package com.vijaya.firebase;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
@@ -9,14 +9,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import android.content.Intent;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -24,37 +28,34 @@ public class HomeActivity extends AppCompatActivity {
     private TextView txtDetails;
     private EditText inputName, inputPhone;
     private Button btnSave;
-    //declaring new buttons
-    public Button logout;
-    public Button deleteacct;
+    private Button btnLogut;
     private DatabaseReference mFirebaseDatabase;
     private FirebaseDatabase mFirebaseInstance;
+    public Button deleteacct;
+
     private String userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        logout = (Button) findViewById(R.id.logout);
-        deleteacct = (Button) findViewById(R.id.deleteacct);
-        //click listeners for logout/delete --------------------------------
-        logout.setOnClickListener(new View.OnClickListener(){
-            public void onClick (View V){
-                logoutfxn();
-            }
-        });
-        deleteacct.setOnClickListener(new View.OnClickListener(){
-            public void onClick (View V){
-                deleteacctfxn();
-            }
-        });
+
         // Displaying toolbar icon
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
         txtDetails = (TextView) findViewById(R.id.txt_user);
         inputName = (EditText) findViewById(R.id.name);
         inputPhone = (EditText) findViewById(R.id.phone);
         btnSave = (Button) findViewById(R.id.btn_save);
+        btnLogut = (Button) findViewById(R.id.logout);
+
+        deleteacct = (Button) findViewById(R.id.deleteacct);
+        deleteacct.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View V) {
+                deleteacctfxn();
+            }
+        });
 
         mFirebaseInstance = FirebaseDatabase.getInstance();
 
@@ -99,6 +100,26 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        btnLogut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(HomeActivity.this, "logout Succesfull", Toast.LENGTH_SHORT).show();
+
+                FirebaseAuth.AuthStateListener authListener = new FirebaseAuth.AuthStateListener() {
+                    @Override
+                    public void onAuthStateChanged(FirebaseAuth firebaseAuth) {
+                        FirebaseUser user = firebaseAuth.getCurrentUser();
+                        if (user == null) {
+                            startActivity(new Intent(HomeActivity.this, LoginActivity.class));
+                            finish();
+                        }
+                    }
+                };
+                FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+                firebaseAuth.addAuthStateListener(authListener);
+                firebaseAuth.signOut();
+            }
+        });
         toggleButton();
     }
 
@@ -159,31 +180,25 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
-    //---------------------------------------------------------logout
-    public void logoutfxn(){
-        auth.signOut();
-        // this listener will be called when there is change in firebase user session
-         FirebaseAuth.AuthStateListener authListener = new FirebaseAuth.AuthStateListener() {
-             @Override
-             public void onAuthStateChanged(@NonNullFirebaseAuthfirebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (userId == null) {
-                //user authstate is changed -user is null
-                //launch login activity
-                    startActivity(new Intent(HomeActivity.this, LoginActivity.class));
-                    finish();
-                }
-            }
-        };
+
+    private void updateUser(String name, String phone) {
+        // updating the user via child nodes
+        if (!TextUtils.isEmpty(name))
+            mFirebaseDatabase.child(userId).child("name").setValue(name);
+
+        if (!TextUtils.isEmpty(phone))
+            mFirebaseDatabase.child(userId).child("phone").setValue(phone);
     }
-//------------------------------------------------------------------------------delete acct
+
+
     public void deleteacctfxn() {
-        FirebaseUseruser = FirebaseAuth.getInstance().getCurrentUser();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             user.delete()
                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
-                        public void onComplete(@NonNullTask<Void>task) {
+                        public void onComplete(@NonNull Task<Void> task) {
+
                         }
 
                         private void updateUser(String name, String phone) {

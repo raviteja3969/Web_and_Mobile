@@ -5,7 +5,6 @@ package com.vijaya.firebase;
  */
 
 public class User {
-
         public String name;
         public String phone;
         // Default constructor required for calls to
