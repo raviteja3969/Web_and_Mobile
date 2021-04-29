@@ -81,11 +81,11 @@ public class MainActivity extends AppCompatActivity {
                     // Fethcing the result
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     if(result != null && result.size() > 0) {
-                        mVoiceInputTv.append(Html.fromHtml("<p style=\"color:blue;\">User : "+result.get(0)+"</p>"));
+                        mVoiceInputTv.append(Html.fromHtml("<p style=\"color:black;\">User : "+result.get(0)+"</p>"));
                         // If user says hello, Ask for User's name & show the Greeting Text with users name.
                         if(result.get(0).equalsIgnoreCase("hello")) {
                             tts.speak("What is your name", TextToSpeech.QUEUE_FLUSH, null);
-                            mVoiceInputTv.append(Html.fromHtml("<p style=\"color:red;\">Speaker : What is your name ?</p>"));
+                            mVoiceInputTv.append(Html.fromHtml("<p style=\"color:black;\">Speaker : What is your name ?</p>"));
                         }else if(result.get(0).contains("name")){
                             // Set the Greeting by indexing
                             String name = result.get(0).substring(result.get(0).lastIndexOf(' ') + 1);
@@ -93,14 +93,14 @@ public class MainActivity extends AppCompatActivity {
                             editor.putString("name", name).apply();
                             tts.speak("Hello, "+name,
                                     TextToSpeech.QUEUE_FLUSH, null);
-                            mVoiceInputTv.append(Html.fromHtml("<p style=\"color:red;\">Speaker : Hello, "+name+"</p>"));
+                            mVoiceInputTv.append(Html.fromHtml("<p style=\"color:black;\">Speaker : Hello, "+name+"</p>"));
                         }else if(result.get(0).contains("not feeling good")){
                             tts.speak("I can understand. Please tell your symptoms in short",
                                     TextToSpeech.QUEUE_FLUSH, null);
-                            mVoiceInputTv.append(Html.fromHtml("<p style=\"color:red;\">Speaker : I can understand. Please tell your symptoms in short</p>"));
+                            mVoiceInputTv.append(Html.fromHtml("<p style=\"color:black;\">Speaker : I can understand. Please tell your symptoms in short</p>"));
                         }else if(result.get(0).contains("thank you")){
                             tts.speak("Thank you too, "+preferences.getString("name","")+" Take care.", TextToSpeech.QUEUE_FLUSH, null);
-                            mVoiceInputTv.append(Html.fromHtml("<p style=\"color:red;\">Speaker : Thank you too, "+preferences.getString("name","")+" Take care.</p>"));
+                            mVoiceInputTv.append(Html.fromHtml("<p style=\"color:black;\">Speaker : Thank you too, "+preferences.getString("name","")+" Take care.</p>"));
                         }else if(result.get(0).contains("what time")){
                             // Speaking the Time for the User
                             SimpleDateFormat sdfDate =new SimpleDateFormat("HH:mm");//dd/MM/yyyy
@@ -108,14 +108,14 @@ public class MainActivity extends AppCompatActivity {
                             String[] strDate = sdfDate.format(now).split(":");
                             if(strDate[1].contains("00"))strDate[1] = "o'clock";
                             tts.speak("The time is : "+sdfDate.format(now), TextToSpeech.QUEUE_FLUSH, null);
-                            mVoiceInputTv.append(Html.fromHtml("<p style=\"color:red;\">Speaker : The time is : "+sdfDate.format(now)+"</p>"));
+                            mVoiceInputTv.append(Html.fromHtml("<p style=\"color:black;\">Speaker : The time is : "+sdfDate.format(now)+"</p>"));
                         }else if(result.get(0).contains("medicine")){
                             tts.speak("I think you have fever. Please take this medicine.",
                                     TextToSpeech.QUEUE_FLUSH, null);
-                            mVoiceInputTv.append(Html.fromHtml("<p style=\"color:red;\">Speaker : I think you have fever. Please take this medicine.</p>"));
+                            mVoiceInputTv.append(Html.fromHtml("<p style=\"color:black;\">Speaker : I think you have fever. Please take this medicine.</p>"));
                         } else {
                             tts.speak("Sorry, I cant help you with that", TextToSpeech.QUEUE_FLUSH, null);
-                            mVoiceInputTv.append(Html.fromHtml("<p style=\"color:red;\">Speaker : Sorry, I cant help you with that</p>"));
+                            mVoiceInputTv.append(Html.fromHtml("<p style=\"color:black;\">Speaker : Sorry, I cant help you with that</p>"));
                         }
                     }
                 }
